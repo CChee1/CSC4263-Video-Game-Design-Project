@@ -1,0 +1,80 @@
+html {
+  background-color: #DDD;
+  color: #444;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.2em;
+
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+h1, h2, h3, h4 {
+  display: inline-block;
+  margin: 1em 100% 0 0;
+  white-space: nowrap;
+  color: #666
+}
+
+h2 {
+  border-bottom: solid 1px #666;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+figure {
+  display: flex;
+  margin: 0;
+}
+
+img {
+  width: 20rem; 
+  height: 15rem;
+  overflow: hidden;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+img.full {
+  object-fit: contain;
+}
+
+header {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #666;
+  padding: 2rem 0;
+  position: relative;
+}
+
+header a {
+  position: absolute;
+  right: 0;
+  bottom: 4rem;
+}
+
+footer {
+  margin-top: 4rem;
+  border-top: 1px solid #666;
+}
+
+
+section { 
+  margin: 2rem 0;
+}
+
+dd { 
+  margin:  0;
+  font-style: italic;
+  font-size: 0.8em;
+  opacity: 0.6;
+  margin-bottom: 1em;
+}
+
+p {
+  text-align: justify;
+  text-align-last: left;
+  
+}
