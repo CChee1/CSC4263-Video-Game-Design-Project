@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Game/Assets/Models/Earth/earth.3DS.meta
+guid: 77a3ac2f3fa4add49b25e15c36426f4b
+=======
 guid: bd4ae0d9dcdce4dc2a3077e80824a792
+>>>>>>> bad controls and bad camers:Game/Assets/Models/train-tracks-segment.fbx.meta
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Game/Assets/Models/Earth/earth.mtl.meta
+guid: 07837ea7776d0a14ba73ac73be3b24a7
+=======
 guid: e3fbc05cb9efd47cb81948be3cb8f1e5
+>>>>>>> bad controls and bad camers:Game/Assets/Scenes/Scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
