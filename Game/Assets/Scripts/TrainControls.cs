@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TrainControls : MonoBehaviour
 {
     public GameObject train;
     List<GameObject> cars = new List<GameObject>();
     Rigidbody locoRB;
-    public float speed = 25.0f;
-    public float turn = 25.0f;
+    public float speed = 20.0f;
+    public float turn = 40.0f;
     public bool pause = false;
 
     public GameObject wagonModel;
@@ -17,6 +18,7 @@ public class TrainControls : MonoBehaviour
     public GameObject wagon1;
     public GameObject wagon2;
     public GameObject wagon3;
+    public Text carsText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class TrainControls : MonoBehaviour
         cars.Add(wagon2);
         cars.Add(wagon3);
         locoRB = GetComponent<Rigidbody>();
+        carsText.text = "Passenger Cars \n" + cars.Count;
     }
 
     // Update is called once per frame
@@ -83,6 +86,7 @@ public class TrainControls : MonoBehaviour
             Debug.Log("Coin collected");
             other.gameObject.SetActive(false);
             CreateWagon();
+            UpdateDisplay();
         }
 
         if (other.gameObject.tag == "Finish")
@@ -103,6 +107,8 @@ public class TrainControls : MonoBehaviour
             {
                 RestartLevel();
             }
+
+            UpdateDisplay();
         }
     }
 
@@ -126,5 +132,15 @@ public class TrainControls : MonoBehaviour
     void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void UpdateDisplay()
+    {
+        carsText.text = "Passenger Cars \n" + cars.Count;
+
+        if (cars.Count < 2)
+        {
+            carsText.color = Color.red;
+        }
     }
 }
