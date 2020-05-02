@@ -85,14 +85,18 @@ public class TrainControls : MonoBehaviour
         {
             Debug.Log("Coin collected");
             other.gameObject.SetActive(false);
+            PauseGame();
             CreateWagon();
             UpdateDisplay();
+            PauseGame();
         }
 
         if (other.gameObject.tag == "Finish")
         {
             Debug.Log("You finished the level!");
-            PauseGame();
+            PlayerPrefs.SetInt("cars", cars.Count);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (other.gameObject.tag == "Passable")
